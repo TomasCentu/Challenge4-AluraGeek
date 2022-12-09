@@ -1,4 +1,17 @@
-@import './login';
-@import "./all";
-@import "./registrer";
-@import "./inicio";
+* {
+    box-sizing: border-box
+}
+
+body {
+    background: #F5F5F5;
+}
+
+@import "variables";
+@import 'nav';
+@import "registrer";
+@import 'login';
+@import 'new.scss';
+@import "all";
+@import "inicio";
+@import "contacto";
+

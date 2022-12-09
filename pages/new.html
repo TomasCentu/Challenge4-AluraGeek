@@ -5,13 +5,14 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>AluraGeek - Login</title>
+        <title>AluraGeek - Registro</title>
         <link rel="stylesheet" href="../styles/css/reset.css">
         <link rel="stylesheet" href="../styles/css/index.css">
         <script src="https://kit.fontawesome.com/807d87a557.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
+
         <header>
             <nav id="nav_conteiner">
                 <div id="nav">
@@ -34,35 +35,66 @@
         </header>
 
         <main>
-            <div class="login_conteiner">
+            <section class="nuevo_conteiner">
+                <h1 class="title">Nuevo Producto</h1>
+
                 <form action="#">
-                    <h2 class="form_title">Iniciar Seción</h2>
 
                     <div class="input_conteiner">
                         <input 
-                            type="email" 
-                            id="email_login" 
-                            placeholder="Escriba su correo electrónico"
+                            type="text" 
+                            id="url_producto" 
+                            placeholder="url"
                             autocomplete="off"
-                            required                            
+                            required
+                            
                         >
-                        <label for="email_login">Escriba su correo electrónico</label>
+                        <label for="url_producto">URL de imagen</label>
                     </div>
-
+                    
                     <div class="input_conteiner">
                         <input 
-                            type="password" 
-                            id="pass_login" 
-                            placeholder="password"
+                            type="text" 
+                            id="categoria_producto" 
+                            placeholder="categoria"
                             autocomplete="off"
                             required
                         >
-                        <label for="pass_login">Escriba su contraseña</label>
+                        <label for="categoria_producto">Categoria del Producto</label>
                     </div>
 
-                    <button id="form_registro_btn">Entrar</button>
+                    <div class="input_conteiner">
+                        <input 
+                            type="text" 
+                            id="titulo_producto" 
+                            placeholder="title"
+                            autocomplete="off"
+                            required
+                        >
+                        <label for="titulo_producto">Titulo del Producto</label>
+                    </div>                
+
+                    <div class="input_conteiner">
+                        <input 
+                            type="text" 
+                            id="precio_producto" 
+                            placeholder="precio"
+                            autocomplete="off"
+                            required
+                        >
+                        <label for="precio_producto">Precio del Producto</label>
+                    </div>
+
+                    <textarea 
+                        name="texto_producto" 
+                        id="txt_producto" 
+                        rows="6" 
+                        placeholder="Escriba su descripción"
+                    ></textarea>
+
+                    <button type="submit" id="form_registro_btn">Publicar</button>
                 </form>
-            </div>
+            </section>
         </main>
 
         <footer>

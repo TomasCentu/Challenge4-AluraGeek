@@ -1,0 +1,25 @@
+.login_conteiner {
+    @include conteiner;
+    margin: 3rem auto;
+
+    form {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .form_title{
+            @include title;
+        }
+
+        .input_conteiner {
+            @include input_conteiner;
+        }
+
+        #form_registro_btn {
+            @include btn-pri;
+            width: 70%;
+            margin: 2rem auto;                
+        }
+    }
+}

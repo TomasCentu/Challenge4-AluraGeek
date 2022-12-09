@@ -1,0 +1,25 @@
+.nuevo_conteiner {
+    @include conteiner;
+
+    .title {
+        @include title;
+    }
+
+    form{
+        text-align: center;
+    
+        .input_conteiner {
+            @include input_conteiner;
+        }
+    
+        #txt_producto {
+            @include textarea;
+        }
+    
+        #form_registro_btn {
+            @include btn-pri;
+            width: 60%;
+        }
+    }
+    
+}

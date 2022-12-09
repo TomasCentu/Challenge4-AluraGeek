@@ -1,0 +1,76 @@
+main {
+    width: 100%;
+
+    .registro_conteiner {
+        @include conteiner;
+    
+        .title {
+            @include title;
+        }
+
+        form {
+            @include conteiner_colum;
+            @include conteiner;
+            min-width: 350px;
+
+            .input_conteiner {
+               @include input_conteiner;
+            }
+
+            .date_conteiner {
+                margin-top: 1.5rem;
+                height: 25px;
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                border-bottom: 2px solid #CCCCCC;
+                position: relative;
+                font-size: 1.2rem;
+    
+                #date_registro {
+                    background: transparent;
+                    border: none;
+                    width: 80px;
+                    color: #999999;
+                    margin: 0 auto .2rem auto;
+                    outline: none;
+                    transition: .3s;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+
+                    &::-webkit-calendar-picker-indicator {
+                        display: none;
+                    }
+
+                    &::-webkit-date-and-time-value {
+                        margin: 0;
+                    }
+
+                    &:focus + label[for=date_registro] {
+                        opacity: 0;
+                    }
+
+                    &:focus{
+                        right: 50%;
+                    }
+                }
+
+                label[for=date_registro] {
+                    width: 50%;
+                    color: #999999;
+                    margin-bottom: .2rem;
+                    transition: .3s;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+
+            #form_registro_btn {
+                @include btn-pri;
+                margin: 2rem 0;                
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+header {
+    width: 100%;
+    padding: 1rem 5rem;
+    background: #FFFFFF;
+
+        #nav_conteiner {
+            width: 80%;
+
+            #nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            a #logo {
+                cursor: pointer;
+            }
+
+            #buscador_conteiner {
+
+                label {
+                    width: 300px;
+                    display: flex;
+                    align-items: center;
+                    border-radius: 25px;
+                    background-color: #f4f4f4;
+                    padding: 12px 20px;
+
+                    .fa-magnifying-glass {
+                        color: #c5c5c5;
+                    }
+
+                    #buscador {
+                        width: 100%;
+                        cursor: default;
+                        border: none;
+                        outline: none;
+                        background-color: transparent;
+                        color: #888888;
+                        
+                        &::placeholder {
+                            color: #c5c5c5;	
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

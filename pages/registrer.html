@@ -1,12 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AluraGeek - Registro</title>
-</head>
-<body>
-    
-</body>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AluraGeek - Registro</title>
+        <link rel="stylesheet" href="../styles/css/reset.css">
+        <link rel="stylesheet" href="../styles/css/index.css">
+        <script src="https://kit.fontawesome.com/807d87a557.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <header>
+            <nav id="nav_conteiner">
+                <div id="nav">
+                    <a href="../index.html">
+                        <img id="logo" src="../images/logo.png" alt="imagen-logo">
+                    </a>
+
+                    <div id="buscador_conteiner">
+                        <label for="buscador">
+                            <input 
+                                type="text" 
+                                id="buscador"
+                                placeholder="¿Qué desea buscar?"
+                            >
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </label>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="registro_conteiner">
+                <h1 class="title">Regristro</h1>
+
+                <form action="#">
+
+                    <div class="input_conteiner">
+                        <input 
+                            type="text" 
+                            id="nombre_registro" 
+                            placeholder="Nombre"
+                            autocomplete="off"
+                            required
+                            
+                        >
+                        <label for="nombre_registro">Nombre Completo</label>
+                    </div>
+                    
+                    <div class="input_conteiner">
+                        <input 
+                            type="email" 
+                            id="email_registro" 
+                            placeholder="Email"
+                            autocomplete="off"
+                            required
+                        >
+                        <label for="email_registro">Email</label>
+                    </div>
+
+                    <div class="input_conteiner">
+                        <input 
+                            type="email" 
+                            id="email_registro_2" 
+                            placeholder="Email"
+                            autocomplete="off"
+                            required
+                        >
+                        <label for="email_registro_2">Reescriba su Email</label>
+                    </div>                
+
+                    <div class="input_conteiner">
+                        <input 
+                            type="password" 
+                            id="password_registro" 
+                            placeholder="Contraseña"
+                            autocomplete="off"
+                            required
+                        >
+                        <label for="password_registro">Contraseña</label>
+                    </div>
+
+                    <div class="input_conteiner">
+                        <input 
+                            type="password" 
+                            id="password_registro_2" 
+                            placeholder="Password"
+                            autocomplete="off"
+                            required
+                        >
+                        <label for="password_registro_2">Reescriba su Contraseña</label>
+                    </div>
+
+                    <div class="date_conteiner">
+                        <input 
+                            type="date" 
+                            id="date_registro" 
+                            required
+                        >
+                        <label for="date_registro">Fecha de nacimiento</label>
+                    </div>
+
+                    <button type="submit" id="form_registro_btn">Resgristrarse</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer_conteiner">
+
+                <div class="footer_links__conteiner">
+                    <a class="logo" href="../index.html">
+                        <img src="../images/logo.png" alt="imagen-logo">
+                    </a>
+        
+                    <div class="links">
+                        
+                        <a class="link_info" href="#">Quienes somos</a>
+                        <a class="link_info" href="#">Política de privacidad</a>
+                        <a class="link_info" href="#">Programa de fidelidad</a>
+                        <a class="link_info" href="#">Nuestras tiendas</a>
+                        <a class="link_info" href="#">Quiero ser franquiciado</a>
+                        <a class="link_info" href="#">Anuncie aquí</a>
+                    </div>
+                </div>
+
+                <div class="footer_conteiner__form">
+                    <form action="#">
+                        <h3 class="title_contacto">Hable con nosotros</h3>
+
+                        <div class="input_conteiner">
+                            <input 
+                                type="text" 
+                                id="nombre_contacto" 
+                                placeholder="Nombre"
+                                autocomplete="off"
+                                required
+                            >
+                            <label for="nombre_contacto">Nombre</label>
+                        </div>
+
+                        <textarea 
+                            name="tex_contacto" 
+                            id="mensaje" 
+                            rows="4" 
+                            placeholder="Escriba su mensaje"
+                        ></textarea>
+
+                        <button class="footer_btn">Enviar mensaje</button>
+
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer_desarrollador">
+                <p>Hecho con <i class="fa-solid fa-heart"></i> por Tomas Centurion - 2022</p>
+            </div>
+        </footer>
+    </body>
 </html>
