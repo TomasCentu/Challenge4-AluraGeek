@@ -1,8 +1,15 @@
 .nuevo_conteiner {
     @include conteiner;
+    text-align: center;
 
     .title {
         @include title;
+        margin-bottom: 0;
+    }
+
+    p.descripcion {
+        font-family: $fuente;
+        margin-bottom: 1rem;
     }
 
     form{
@@ -10,6 +17,7 @@
     
         .input_conteiner {
             @include input_conteiner;
+            margin-bottom: 1.5rem;
         }
     
         #txt_producto {

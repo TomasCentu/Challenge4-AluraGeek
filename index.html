@@ -1,30 +1,247 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AluraGeek</title>
-</head>
-<body>
-    <header>
-        <div id="nav">
-            <a href="../index.html">
-                <img id="logo" src="../images/logo.png" alt="imagen-logo">
-            </a>
 
-            <div class="buscador_conteiner">
-                <label for="buscador">
-                    <!-- icono de lupa -->
-                    <input type="text" id="buscador">
-                </label>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AluraGeek</title>
+        <link rel="stylesheet" href="../styles/css/reset.css">
+        <link rel="stylesheet" href="../styles/css/index.css">
+        <script src="https://kit.fontawesome.com/807d87a557.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <header>
+            <nav id="nav_conteiner">
+                <div id="nav">
+                    <a href="../index.html">
+                        <img id="logo" src="../images/logo.png" alt="imagen-logo">
+                    </a>
+
+                    <div id="buscador_conteiner">
+                        <label for="buscador">
+                            <input 
+                                type="text" 
+                                id="buscador"
+                                placeholder="¿Qué desea buscar?"
+                            >
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </label>
+                    </div>
+
+                    <div class="buttons_conteiner">
+                        <a href="./pages/login.html" class="btn_nav_pri">Iniciar Sesión</a>
+                        <a href="./pages/registrer.html" class="btn_nav_sec">Registrarse</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="banner">
+                <div class="banner_conteiner">
+                    <h1 class="title">Promociones</h1>
+                    <p class="descripcion">Productos seleccionados con 33% de descuento</p>
+                    <button type="button" class="btn_banner">Ver Descuentos</button>
+                </div>
+            </section>
+
+            <section class="todos_productos">
+                <section class="head">
+                    <h1 class="title">Star Wars</h1>
+                    <a href="./pages/all.html" class="ir_productos">
+                        Ver todo
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>	
+                </section>
+
+                <section class="body">
+                    <div class="card_conteiner">
+                        <img class="card_img" src="../images/producto2.png" alt="imagen-producto">
+                        <h4 class="card_title">Producto</h4>
+                        <p class="card_precio">$ 60.00</p>
+                        <a href="#" class="card_ver">Ver producto</a>
+                    </div>
+                    <div class="card_conteiner">
+                        <img class="card_img" src="../images/producto3.png" alt="imagen-producto">
+                        <h4 class="card_title">Producto</h4>
+                        <p class="card_precio">$ 60.00</p>
+                        <a href="#" class="card_ver">Ver producto</a>
+                    </div>
+                    <div class="card_conteiner">
+                        <img class="card_img" src="../images/producto4.png" alt="imagen-producto">
+                        <h4 class="card_title">Producto</h4>
+                        <p class="card_precio">$ 60.00</p>
+                        <a href="#" class="card_ver">Ver producto</a>
+                    </div>
+                    <div class="card_conteiner">
+                        <img class="card_img" src="../images/producto7.png" alt="imagen-producto">
+                        <h4 class="card_title">Producto</h4>
+                        <p class="card_precio">$ 60.00</p>
+                        <a href="#" class="card_ver">Ver producto</a>
+                    </div>
+                    <div class="card_conteiner">
+                        <img class="card_img" src="../images/producto12.png" alt="imagen-producto">
+                        <h4 class="card_title">Producto</h4>
+                        <p class="card_precio">$ 60.00</p>
+                        <a href="#" class="card_ver">Ver producto</a>
+                    </div>
+                </section>
+            </section>
+
+            <section class="todos_productos">
+                <section class="head">
+                    <h1 class="title">Consolas</h1>
+                    <a href="./pages/all.html" class="ir_productos">
+                        Ver todo
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>	
+                </section>
+
+                <section class="body">
+                    <div class="card_conteiner">
+                        <img class="card_img" src="../images/producto1.png" alt="imagen-producto">
+                        <h4 class="card_title">Producto</h4>
+                        <p class="card_precio">$ 60.00</p>
+                        <a href="#" class="card_ver">Ver producto</a>
+                    </div>
+                    <div class="card_conteiner">
+                        <img class="card_img" src="../images/producto5.png" alt="imagen-producto">
+                        <h4 class="card_title">Producto</h4>
+                        <p class="card_precio">$ 60.00</p>
+                        <a href="#" class="card_ver">Ver producto</a>
+                    </div>
+                    <div class="card_conteiner">
+                        <img class="card_img" src="../images/producto6.png" alt="imagen-producto">
+                        <h4 class="card_title">Producto</h4>
+                        <p class="card_precio">$ 60.00</p>
+                        <a href="#" class="card_ver">Ver producto</a>
+                    </div>
+                    <div class="card_conteiner">
+                        <img class="card_img" src="../images/producto18.png" alt="imagen-producto">
+                        <h4 class="card_title">Producto</h4>
+                        <p class="card_precio">$ 60.00</p>
+                        <a href="#" class="card_ver">Ver producto</a>
+                    </div>
+                    <div class="card_conteiner">
+                        <img class="card_img" src="../images/producto17.png" alt="imagen-producto">
+                        <h4 class="card_title">Producto</h4>
+                        <p class="card_precio">$ 60.00</p>
+                        <a href="#" class="card_ver">Ver producto</a>
+                    </div>
+                    <div class="card_conteiner">
+                        <img class="card_img" src="../images/producto15.png" alt="imagen-producto">
+                        <h4 class="card_title">Producto</h4>
+                        <p class="card_precio">$ 60.00</p>
+                        <a href="#" class="card_ver">Ver producto</a>
+                    </div>
+                </section>
+            </section>
+
+            <section class="todos_productos">
+                <section class="head">
+                    <h1 class="title">diversos</h1>
+                    <a href="./pages/all.html" class="ir_productos">
+                        Ver todo
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>	
+                </section>
+
+                <section class="body">
+                    <div class="card_conteiner">
+                        <img class="card_img" src="../images/producto8.png" alt="imagen-producto">
+                        <h4 class="card_title">Producto</h4>
+                        <p class="card_precio">$ 60.00</p>
+                        <a href="#" class="card_ver">Ver producto</a>
+                    </div>
+                    <div class="card_conteiner">
+                        <img class="card_img" src="../images/producto9.png" alt="imagen-producto">
+                        <h4 class="card_title">Producto</h4>
+                        <p class="card_precio">$ 60.00</p>
+                        <a href="#" class="card_ver">Ver producto</a>
+                    </div>
+                    <div class="card_conteiner">
+                        <img class="card_img" src="../images/producto16.png" alt="imagen-producto">
+                        <h4 class="card_title">Producto</h4>
+                        <p class="card_precio">$ 60.00</p>
+                        <a href="#" class="card_ver">Ver producto</a>
+                    </div>
+                    <div class="card_conteiner">
+                        <img class="card_img" src="../images/producto13.png" alt="imagen-producto">
+                        <h4 class="card_title">Producto</h4>
+                        <p class="card_precio">$ 60.00</p>
+                        <a href="#" class="card_ver">Ver producto</a>
+                    </div>
+                    <div class="card_conteiner">
+                        <img class="card_img" src="../images/producto11.png" alt="imagen-producto">
+                        <h4 class="card_title">Producto</h4>
+                        <p class="card_precio">$ 60.00</p>
+                        <a href="#" class="card_ver">Ver producto</a>
+                    </div>
+                </section>
+            </section>
+            
+        </main>
+
+        <footer>
+            <div class="footer_conteiner">
+
+                <div class="footer_links__conteiner">
+                    <a class="logo" href="../index.html">
+                        <img src="../images/logo.png" alt="imagen-logo">
+                    </a>
+        
+                    <div class="links">
+                        
+                        <a class="link_info" href="#">Quienes somos</a>
+                        <a class="link_info" href="#">Política de privacidad</a>
+                        <a class="link_info" href="#">Programa de fidelidad</a>
+                        <a class="link_info" href="#">Nuestras tiendas</a>
+                        <a class="link_info" href="#">Quiero ser franquiciado</a>
+                        <a class="link_info" href="#">Anuncie aquí</a>
+                    </div>
+                </div>
+
+                <div class="footer_conteiner__form">
+                    <form action="#">
+                        <h3 class="title_contacto">Hable con nosotros</h3>
+
+                        <div class="input_conteiner">
+                            <input 
+                                type="text" 
+                                id="nombre_contacto" 
+                                placeholder="Nombre"
+                                autocomplete="off"
+                                required
+                            >
+                            <label for="nombre_contacto">Nombre</label>
+                        </div>
+
+                        <textarea 
+                            name="tex_contacto" 
+                            id="mensaje" 
+                            rows="4" 
+                            placeholder="Escriba su mensaje"
+                        ></textarea>
+
+                        <button class="footer_btn">Enviar mensaje</button>
+
+                    </form>
+                </div>
             </div>
 
-            <div class="nav_buttons_conteiner">
-                <a href="./login.html" id="nav_button">INICIO</a>
-                <a href="./all.html" id="nav_button">PRODUCTOS</a>
+            <div class="footer_desarrollador">
+                <p>
+                    Hecho con 
+                    <i class="fa-solid fa-heart"></i>
+                    por 
+                    <a href="https://github.com/TomasCentu" class="desarrollador" target="_blank">
+                        Tomas Centurion
+                    </a>
+                     - 2022
+                </p>
             </div>
-        </div>
-    </header>
-</body>
+        </footer>
+    </body>
 </html>

@@ -26,7 +26,11 @@ footer {
     
                 .link_info {
                     text-decoration: none;
-                    color: #000000;
+                    color: #464646;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
                 }
             }
         }
@@ -39,10 +43,15 @@ footer {
             .title_contacto {
                 font-family: $fuente;
                 font-weight: 700;
+                color: #464646;
             }
 
             .input_conteiner {
                 @include input_conteiner;
+
+                input {
+                    
+                }
             }
 
             #mensaje {
@@ -64,6 +73,11 @@ footer {
 
         .fa-heart {
             color: #FF0000;
+        }
+
+        .desarrollador {
+            text-decoration: none;
+            color: $color_primario;
         }
     }
 }

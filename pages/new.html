@@ -30,6 +30,11 @@
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </label>
                     </div>
+
+                    <div class="buttons_conteiner">
+                        <a href="../index.html" class="btn_nav_pri">Inicio</a>
+                        <a href="./all.html" class="btn_nav_sec">Todos los Poductos</a>
+                    </div>
                 </div>
             </nav>
         </header>
@@ -37,6 +42,7 @@
         <main>
             <section class="nuevo_conteiner">
                 <h1 class="title">Nuevo Producto</h1>
+                <p class="descripcion">Complete los siguientes datos</p>
 
                 <form action="#">
 
@@ -76,7 +82,7 @@
 
                     <div class="input_conteiner">
                         <input 
-                            type="text" 
+                            type="number" 
                             id="precio_producto" 
                             placeholder="precio"
                             autocomplete="off"
@@ -89,7 +95,7 @@
                         name="texto_producto" 
                         id="txt_producto" 
                         rows="6" 
-                        placeholder="Escriba su descripción"
+                        placeholder="Escriba una descripción del producto"
                     ></textarea>
 
                     <button type="submit" id="form_registro_btn">Publicar</button>
@@ -145,7 +151,15 @@
             </div>
 
             <div class="footer_desarrollador">
-                <p>Hecho con <i class="fa-solid fa-heart"></i> por Tomas Centurion - 2022</p>
+                <p>
+                    Hecho con 
+                    <i class="fa-solid fa-heart"></i>
+                    por 
+                    <a href="https://github.com/TomasCentu" class="desarrollador" target="_blank">
+                        Tomas Centurion
+                    </a>
+                     - 2022
+                </p>
             </div>
         </footer>
     </body>

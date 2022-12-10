@@ -16,10 +16,21 @@
             @include input_conteiner;
         }
 
+        p.pregunta_sesion {
+            font-size: .8rem;
+            color: #999999;
+            margin-top: 1.5rem;
+            
+            & a{
+                text-decoration: none;
+                color: $color_primario;
+            }
+        }
+
         #form_registro_btn {
             @include btn-pri;
             width: 70%;
-            margin: 2rem auto;                
+            margin: 0 auto 2rem auto;                
         }
     }
 }

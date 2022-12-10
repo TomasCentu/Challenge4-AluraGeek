@@ -9,16 +9,17 @@ body {
 
 header {
   width: 100%;
-  padding: 1rem 5rem;
   background: #FFFFFF;
 }
 header #nav_conteiner {
   width: 80%;
+  margin: 0 auto;
+  padding: 1rem 5rem;
 }
 header #nav_conteiner #nav {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 header #nav_conteiner #nav a #logo {
   cursor: pointer;
@@ -45,6 +46,39 @@ header #nav_conteiner #nav #buscador_conteiner label #buscador {
 header #nav_conteiner #nav #buscador_conteiner label #buscador::placeholder {
   color: #c5c5c5;
 }
+header #nav_conteiner #nav #buscador_conteiner label #buscador:focus + .fa-magnifying-glass {
+  color: #2A7AE4;
+  cursor: pointer;
+}
+header #nav_conteiner #nav .buttons_conteiner {
+  display: flex;
+  gap: 1.5rem;
+}
+header #nav_conteiner #nav .buttons_conteiner .btn_nav_pri {
+  padding: 1rem;
+  border: none;
+  color: #FFFFFF;
+  background: #2A7AE4;
+  cursor: pointer;
+  text-decoration: none;
+}
+header #nav_conteiner #nav .buttons_conteiner .btn_nav_pri:hover {
+  box-shadow: 1px 1px 10px #2A7AE4;
+}
+header #nav_conteiner #nav .buttons_conteiner .btn_nav_sec {
+  padding: 1rem 2rem;
+  border: 1px solid #2A7AE4;
+  color: #2A7AE4;
+  background: #FFFFFF;
+  cursor: pointer;
+  text-decoration: none;
+}
+header #nav_conteiner #nav .buttons_conteiner .btn_nav_sec:hover {
+  box-shadow: 1px 1px 25px #d1def1;
+}
+header #nav_conteiner #nav .buttons_conteiner .btn_nav_pri, header #nav_conteiner #nav .buttons_conteiner .btn_nav_sec {
+  padding: 0.75rem;
+}
 
 main {
   width: 100%;
@@ -60,7 +94,6 @@ main .registro_conteiner .title {
   margin: 2rem 0 1rem 0;
   font-family: "Raleway", sans-serif;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid #CCCCCC;
   letter-spacing: 8px;
 }
 main .registro_conteiner form {
@@ -85,6 +118,7 @@ main .registro_conteiner form .input_conteiner input {
   border: none;
   outline: none;
   background-color: transparent;
+  color: #464646;
 }
 main .registro_conteiner form .input_conteiner input::placeholder {
   visibility: hidden;
@@ -93,11 +127,11 @@ main .registro_conteiner form .input_conteiner input:focus + label, main .regist
   top: 0.5rem;
   left: 0rem;
   font-size: 0.9rem;
-  color: #AAAAAA;
+  color: #2A7AE4;
 }
 main .registro_conteiner form .input_conteiner label {
   position: absolute;
-  color: #999999;
+  color: #464646;
   top: 2rem;
   left: 0;
   transition: 0.3s;
@@ -134,17 +168,29 @@ main .registro_conteiner form .date_conteiner #date_registro::-webkit-date-and-t
 main .registro_conteiner form .date_conteiner #date_registro:focus + label[for=date_registro] {
   opacity: 0;
 }
+main .registro_conteiner form .date_conteiner #date_registro:valid + label[for=date_registro] {
+  color: #2A7AE4;
+}
 main .registro_conteiner form .date_conteiner #date_registro:focus {
   right: 50%;
 }
 main .registro_conteiner form .date_conteiner label[for=date_registro] {
   width: 50%;
-  color: #999999;
+  color: #464646;
   margin-bottom: 0.2rem;
   transition: 0.3s;
   position: absolute;
   top: 0;
   left: 0;
+}
+main .registro_conteiner form p.pregunta_sesion {
+  font-size: 0.8rem;
+  color: #999999;
+  margin-top: 1rem;
+}
+main .registro_conteiner form p.pregunta_sesion a {
+  text-decoration: none;
+  color: #2A7AE4;
 }
 main .registro_conteiner form #form_registro_btn {
   padding: 1rem;
@@ -152,7 +198,8 @@ main .registro_conteiner form #form_registro_btn {
   color: #FFFFFF;
   background: #2A7AE4;
   cursor: pointer;
-  margin: 2rem 0;
+  text-decoration: none;
+  margin-bottom: 2rem;
 }
 main .registro_conteiner form #form_registro_btn:hover {
   box-shadow: 1px 1px 10px #2A7AE4;
@@ -176,7 +223,6 @@ main .registro_conteiner form #form_registro_btn:hover {
   margin: 2rem 0 1rem 0;
   font-family: "Raleway", sans-serif;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid #CCCCCC;
   letter-spacing: 8px;
 }
 .login_conteiner form .input_conteiner {
@@ -191,6 +237,7 @@ main .registro_conteiner form #form_registro_btn:hover {
   border: none;
   outline: none;
   background-color: transparent;
+  color: #464646;
 }
 .login_conteiner form .input_conteiner input::placeholder {
   visibility: hidden;
@@ -199,15 +246,24 @@ main .registro_conteiner form #form_registro_btn:hover {
   top: 0.5rem;
   left: 0rem;
   font-size: 0.9rem;
-  color: #AAAAAA;
+  color: #2A7AE4;
 }
 .login_conteiner form .input_conteiner label {
   position: absolute;
-  color: #999999;
+  color: #464646;
   top: 2rem;
   left: 0;
   transition: 0.3s;
   cursor: text;
+}
+.login_conteiner form p.pregunta_sesion {
+  font-size: 0.8rem;
+  color: #999999;
+  margin-top: 1.5rem;
+}
+.login_conteiner form p.pregunta_sesion a {
+  text-decoration: none;
+  color: #2A7AE4;
 }
 .login_conteiner form #form_registro_btn {
   padding: 1rem;
@@ -215,8 +271,9 @@ main .registro_conteiner form #form_registro_btn:hover {
   color: #FFFFFF;
   background: #2A7AE4;
   cursor: pointer;
+  text-decoration: none;
   width: 70%;
-  margin: 2rem auto;
+  margin: 0 auto 2rem auto;
 }
 .login_conteiner form #form_registro_btn:hover {
   box-shadow: 1px 1px 10px #2A7AE4;
@@ -226,6 +283,7 @@ main .registro_conteiner form #form_registro_btn:hover {
   width: 60%;
   max-width: 550px;
   margin: 0 auto;
+  text-align: center;
 }
 .nuevo_conteiner .title {
   text-align: center;
@@ -233,8 +291,12 @@ main .registro_conteiner form #form_registro_btn:hover {
   margin: 2rem 0 1rem 0;
   font-family: "Raleway", sans-serif;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid #CCCCCC;
   letter-spacing: 8px;
+  margin-bottom: 0;
+}
+.nuevo_conteiner p.descripcion {
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 1rem;
 }
 .nuevo_conteiner form {
   text-align: center;
@@ -244,6 +306,7 @@ main .registro_conteiner form #form_registro_btn:hover {
   margin: 0 0 0.5rem 0;
   font-size: 1.2rem;
   border-bottom: 2px solid #CCCCCC;
+  margin-bottom: 1.5rem;
 }
 .nuevo_conteiner form .input_conteiner input {
   width: 100%;
@@ -251,6 +314,7 @@ main .registro_conteiner form #form_registro_btn:hover {
   border: none;
   outline: none;
   background-color: transparent;
+  color: #464646;
 }
 .nuevo_conteiner form .input_conteiner input::placeholder {
   visibility: hidden;
@@ -259,11 +323,11 @@ main .registro_conteiner form #form_registro_btn:hover {
   top: 0.5rem;
   left: 0rem;
   font-size: 0.9rem;
-  color: #AAAAAA;
+  color: #2A7AE4;
 }
 .nuevo_conteiner form .input_conteiner label {
   position: absolute;
-  color: #999999;
+  color: #464646;
   top: 2rem;
   left: 0;
   transition: 0.3s;
@@ -273,6 +337,7 @@ main .registro_conteiner form #form_registro_btn:hover {
   border: none;
   outline: none;
   resize: none;
+  color: #464646;
   padding: 0.5rem;
   width: 100%;
   margin: 1rem auto;
@@ -289,16 +354,130 @@ main .registro_conteiner form #form_registro_btn:hover {
   color: #FFFFFF;
   background: #2A7AE4;
   cursor: pointer;
+  text-decoration: none;
   width: 60%;
 }
 .nuevo_conteiner form #form_registro_btn:hover {
   box-shadow: 1px 1px 10px #2A7AE4;
 }
 
+section.todos_productos {
+  width: 80%;
+  margin: 2rem auto;
+}
+section.todos_productos section.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+section.todos_productos section.head h1.title {
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: "Raleway", sans-serif;
+}
+section.todos_productos section.head a.btn_productos {
+  padding: 1rem;
+  border: none;
+  color: #FFFFFF;
+  background: #2A7AE4;
+  cursor: pointer;
+  text-decoration: none;
+}
+section.todos_productos section.head a.btn_productos:hover {
+  box-shadow: 1px 1px 10px #2A7AE4;
+}
+section.todos_productos section.head a.ir_productos {
+  justify-content: center;
+  color: #2A7AE4;
+  text-decoration: none;
+}
+section.todos_productos section.body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+section.todos_productos section.body .card_conteiner {
+  width: 150px;
+}
+section.todos_productos section.body .card_conteiner .card_img {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+section.todos_productos section.body .card_conteiner .card_title {
+  margin-bottom: 0.5rem;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  font-style: italic;
+}
+section.todos_productos section.body .card_conteiner .card_precio {
+  margin-bottom: 0.5rem;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+section.todos_productos section.body .card_conteiner .card_ver {
+  justify-content: center;
+  color: #2A7AE4;
+  text-decoration: none;
+}
+section.todos_productos section.body .card_conteiner .card_id {
+  margin-bottom: 0.5rem;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.9rem;
+}
+section.todos_productos section.body .card_conteiner .card_id:before {
+  content: "#";
+}
+
+.banner {
+  background-image: url(../../images/banner.png);
+  width: 100%;
+  height: 350px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+}
+.banner .banner_conteiner {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+}
+.banner .banner_conteiner h1.title {
+  font-family: "Raleway", sans-serif;
+  font-size: 2rem;
+  color: #FFFFFF;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.banner .banner_conteiner p.descripcion {
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 1.5rem;
+}
+.banner .banner_conteiner button.btn_banner {
+  padding: 1rem;
+  border: none;
+  color: #FFFFFF;
+  background: #2A7AE4;
+  cursor: pointer;
+  text-decoration: none;
+}
+.banner .banner_conteiner button.btn_banner:hover {
+  box-shadow: 1px 1px 10px #2A7AE4;
+}
+.banner .banner_conteiner button.btn_banner:hover {
+  box-shadow: none;
+}
+
 footer {
   width: 100%;
   margin: 3rem 0 0 0;
-  background: #EAF2FD;
+  background: #d1def1;
 }
 footer .footer_conteiner {
   width: 70%;
@@ -322,7 +501,10 @@ footer .footer_conteiner .footer_links__conteiner .links {
 }
 footer .footer_conteiner .footer_links__conteiner .links .link_info {
   text-decoration: none;
-  color: #000000;
+  color: #464646;
+}
+footer .footer_conteiner .footer_links__conteiner .links .link_info:hover {
+  text-decoration: underline;
 }
 footer .footer_conteiner .footer_conteiner__form {
   width: 45%;
@@ -330,6 +512,7 @@ footer .footer_conteiner .footer_conteiner__form {
 footer .footer_conteiner .footer_conteiner__form .title_contacto {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
+  color: #464646;
 }
 footer .footer_conteiner .footer_conteiner__form .input_conteiner {
   position: relative;
@@ -343,6 +526,7 @@ footer .footer_conteiner .footer_conteiner__form .input_conteiner input {
   border: none;
   outline: none;
   background-color: transparent;
+  color: #464646;
 }
 footer .footer_conteiner .footer_conteiner__form .input_conteiner input::placeholder {
   visibility: hidden;
@@ -351,11 +535,11 @@ footer .footer_conteiner .footer_conteiner__form .input_conteiner input:focus + 
   top: 0.5rem;
   left: 0rem;
   font-size: 0.9rem;
-  color: #AAAAAA;
+  color: #2A7AE4;
 }
 footer .footer_conteiner .footer_conteiner__form .input_conteiner label {
   position: absolute;
-  color: #999999;
+  color: #464646;
   top: 2rem;
   left: 0;
   transition: 0.3s;
@@ -365,6 +549,7 @@ footer .footer_conteiner .footer_conteiner__form #mensaje {
   border: none;
   outline: none;
   resize: none;
+  color: #464646;
   padding: 0.5rem;
   width: 100%;
   margin: 1rem auto;
@@ -381,6 +566,7 @@ footer .footer_conteiner .footer_conteiner__form .footer_btn {
   color: #FFFFFF;
   background: #2A7AE4;
   cursor: pointer;
+  text-decoration: none;
 }
 footer .footer_conteiner .footer_conteiner__form .footer_btn:hover {
   box-shadow: 1px 1px 10px #2A7AE4;
@@ -394,6 +580,10 @@ footer .footer_desarrollador {
 }
 footer .footer_desarrollador .fa-heart {
   color: #FF0000;
+}
+footer .footer_desarrollador .desarrollador {
+  text-decoration: none;
+  color: #2A7AE4;
 }
 
 @media (max-width: 1024px) {

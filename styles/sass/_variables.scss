@@ -2,7 +2,8 @@
 
 $fuente: 'Raleway', sans-serif;
 $color_primario: #2A7AE4;
-$color_secundario: #EAF2FD;
+$color_secundario: #d1def1;
+$color_letra: #464646;
 $boder_bottom: 2px solid #CCCCCC;
 
 
@@ -26,7 +27,6 @@ $boder_bottom: 2px solid #CCCCCC;
     margin: 2rem 0 1rem 0;
     font-family: $fuente;
     padding-bottom: .5rem;
-    border-bottom: $boder_bottom;
     letter-spacing: 8px;
 }
 
@@ -42,6 +42,7 @@ $boder_bottom: 2px solid #CCCCCC;
         border: none;
         outline: none;
         background-color: transparent;
+        color: $color_letra;
 
         &::placeholder {
             visibility: hidden;
@@ -52,13 +53,13 @@ $boder_bottom: 2px solid #CCCCCC;
             top: .5rem;
             left: 0rem;
             font-size: .9rem;
-            color: #AAAAAA;
+            color: $color_primario;
         }
     }
 
     label {
         position: absolute;
-        color: #999999;
+        color: $color_letra;
         top: 2rem;
         left: 0;
         transition: 0.3s;
@@ -70,6 +71,7 @@ $boder_bottom: 2px solid #CCCCCC;
     border: none;
     outline: none;
     resize: none;
+    color: $color_letra;
     padding: .5rem;
     width: 100%;
     margin: 1rem auto;
@@ -88,6 +90,7 @@ $boder_bottom: 2px solid #CCCCCC;
     color: #FFFFFF;
     background: $color_primario;
     cursor: pointer;
+    text-decoration: none;
 
     &:hover {
         box-shadow: 1px 1px 10px $color_primario;
@@ -100,4 +103,15 @@ $boder_bottom: 2px solid #CCCCCC;
     color: $color_primario;
     background: #FFFFFF;
     cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+        box-shadow: 1px 1px 25px $color_secundario;
+    }
+}
+
+@mixin card {
+    margin-bottom: .5rem;
+    font-family: $fuente;
+    font-size: .9rem;
 }

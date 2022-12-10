@@ -51,6 +51,10 @@ main {
                         opacity: 0;
                     }
 
+                    &:valid + label[for=date_registro] {
+                        color: $color_primario;
+                    }
+
                     &:focus{
                         right: 50%;
                     }
@@ -58,7 +62,7 @@ main {
 
                 label[for=date_registro] {
                     width: 50%;
-                    color: #999999;
+                    color: $color_letra;
                     margin-bottom: .2rem;
                     transition: .3s;
                     position: absolute;
@@ -67,9 +71,20 @@ main {
                 }
             }
 
+            p.pregunta_sesion {
+                font-size: .8rem;
+                color: #999999;
+                margin-top: 1rem;
+                
+                & a{
+                    text-decoration: none;
+                    color: $color_primario;
+                }
+            }
+
             #form_registro_btn {
                 @include btn-pri;
-                margin: 2rem 0;                
+                margin-bottom: 2rem;                
             }
         }
     }
