@@ -14,26 +14,27 @@
     <body>
 
         <header>
-            <nav id="nav_conteiner">
-                <div id="nav">
+            <nav class="nav_conteiner">
+                <div class="nav">
                     <a href="../index.html">
-                        <img id="logo" src="../images/logo.png" alt="imagen-logo">
+                        <img class="logo" src="../images/logo.png" alt="imagen-logo">
                     </a>
 
-                    <div id="buscador_conteiner">
-                        <label for="buscador">
-                            <input 
-                                type="text" 
-                                id="buscador"
-                                placeholder="¿Qué desea buscar?"
-                            >
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </label>
-                    </div>
+                    <form class="buscador_conteiner">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input 
+                            type="search" 
+                            class="buscador"
+                            id="buscador"
+                            placeholder="¿Qué desea buscar?"
+                        >
+                    </form>
 
+                    <i class="fa-solid fa-bars"></i>
+                    
                     <div class="buttons_conteiner">
-                        <a href="../index.html" class="btn_nav_pri">Inicio</a>
-                        <a href="./all.html" class="btn_nav_sec">Todos los Poductos</a>
+                        <a href="./login.html" class="btn_nav_pri">Iniciar Sesión</a>
+                        <a href="./registrer.html" class="btn_nav_sec">Registrarse</a>
                     </div>
                 </div>
             </nav>
@@ -122,9 +123,9 @@
                     </div>
                 </div>
 
-                <div class="footer_conteiner__form">
-                    <form action="#">
-                        <h3 class="title_contacto">Hable con nosotros</h3>
+                <div class="user_conteiner contacto">
+                    <form action="#" class="user_form contacto">
+                        <h2 class="form_title contacto">Hable con nosotros</h2>
 
                         <div class="input_conteiner">
                             <input 
@@ -144,7 +145,7 @@
                             placeholder="Escriba su mensaje"
                         ></textarea>
 
-                        <button class="footer_btn">Enviar mensaje</button>
+                        <button type="submit" class="form_registro_btn">Enviar mensaje</button>
 
                     </form>
                 </div>
@@ -163,4 +164,5 @@
             </div>
         </footer>
     </body>
+    <script src="../script/validaciones.js"></script>
 </html>

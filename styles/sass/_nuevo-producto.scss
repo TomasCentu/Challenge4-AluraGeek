@@ -29,5 +29,16 @@
             width: 60%;
         }
     }
+}
+
+@media (max-width: 425px) {
+    .nuevo_conteiner {
+        width: 90%;
     
+        form{
+            #form_registro_btn {
+                width: 100%;
+            }
+        }
+    }
 }

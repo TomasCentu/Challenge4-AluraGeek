@@ -1,0 +1,123 @@
+section.todos_productos {
+    width: 80%;
+    margin: 2rem auto;
+
+    & section.head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+
+        & h1.title_productos {
+            font-size: 1.5em;
+            font-weight: bold;
+            font-family: $fuente;
+        }
+
+        & a.btn_productos {
+            @include btn-pri;
+        }
+
+        & a.ir_productos {
+            justify-content: center;
+            color: $color_primario;
+            text-decoration: none;
+        }
+    }
+
+    & section.body {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem; 
+
+        & div.card_conteiner {
+            width: 150px;
+
+            & img.card_img {
+                margin-bottom: .5rem;
+            }
+        
+            & h4.card_title{
+                @include card;
+                font-weight: 300;
+                font-style: italic;
+            }
+        
+            & p.card_precio {
+                @include card;
+                font-weight: bold;
+            }
+
+            & a.card_ver {
+                color: $color_primario;
+                text-decoration: none;
+            }
+        
+            & p.card_id {
+                @include card;
+
+                &:before {
+                    content: '#';
+                }
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 425px) {
+    section.todos_productos {
+        width: 90%;
+        margin: 1rem auto;
+    
+        & section.head {
+
+            & h1.title_productos {
+                font-size: 1rem;
+            }
+    
+            & a.btn_productos {
+                padding: .4rem;
+                text-align: center;
+            }
+        }
+
+        & section.body {
+            text-align: center;
+    
+            & div.card_conteiner {
+                width: 100%;
+                max-width: 220px;
+                height: 235px;
+                position: relative;
+    
+                & img.card_img {
+                    width: 90%;
+                    height: 180px;
+                }
+            
+                & h4.card_title{
+                    position: absolute;
+                    left: 5%;
+                }
+            
+                & p.card_precio {
+                    position: absolute;
+                    left: 5%;
+                    bottom: 0;
+                }
+    
+                & a.card_ver {
+                    position: absolute;
+                    right: 5%;
+                    bottom: 15%;
+                }
+            
+                & p.card_id {
+                    position: absolute;
+                    right: 5%;
+                }
+            }
+        }
+    }
+}

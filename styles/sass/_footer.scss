@@ -4,15 +4,17 @@ footer {
     background: $color_secundario;
 
     .footer_conteiner {
-        width: 70%;
+        width: 80%;
         margin: 0 auto;
         display: flex;
+        gap: 1rem;
         justify-content: space-between;
         padding: 3rem 0;
 
         .footer_links__conteiner {
             display: flex;
-            gap: 3rem;
+            width: 60%;
+            justify-content: space-around;
 
             a.logo {
                 cursor: pointer;
@@ -32,34 +34,6 @@ footer {
                         text-decoration: underline;
                     }
                 }
-            }
-        }
-
-       
-
-        .footer_conteiner__form {
-            width: 45%;
-
-            .title_contacto {
-                font-family: $fuente;
-                font-weight: 700;
-                color: #464646;
-            }
-
-            .input_conteiner {
-                @include input_conteiner;
-
-                input {
-                    
-                }
-            }
-
-            #mensaje {
-                @include textarea;
-            }
-
-            .footer_btn {
-                @include btn-pri;
             }
         }
     }
@@ -85,7 +59,6 @@ footer {
 
 @media (max-width: 1024px) {
     footer {
-
         .footer_conteiner{
             .footer_links__conteiner {
                 display: block;
@@ -103,5 +76,49 @@ footer {
             }
         }
         
+    }
+}
+
+@media (max-width: 500px) {
+    footer {
+        & div.footer_conteiner{
+            width: 100%;
+            flex-direction: column;
+            padding: 1rem 0;
+            align-items: center;
+
+            & div.footer_links__conteiner {
+                width: 100%;
+                display: block;
+                text-align: center;
+
+                & a.logo {
+                    & img {
+                        margin-bottom: 1rem;
+                    }
+                }
+        
+                & div.links {
+                    width: 100%;
+                    gap: 1.5rem 0;
+                }
+            }
+
+            & div.user_conteiner.contacto {
+                border-top: 1px solid $color_primario;
+                width: 100%;
+                text-align: center;
+
+                form.user_form.contacto {
+                    width: 80%;
+                    margin: 0 auto;
+                    gap: 0;
+
+                    h2.form_title.contacto {
+                        margin: 1rem 0;
+                    }
+                }
+            }
+        }
     }
 }

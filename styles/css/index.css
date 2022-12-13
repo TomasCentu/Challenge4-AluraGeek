@@ -11,50 +11,53 @@ header {
   width: 100%;
   background: #FFFFFF;
 }
-header #nav_conteiner {
+header nav.nav_conteiner {
   width: 80%;
   margin: 0 auto;
   padding: 1rem 5rem;
 }
-header #nav_conteiner #nav {
+header nav.nav_conteiner div.nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-header #nav_conteiner #nav a #logo {
+header nav.nav_conteiner div.nav a > img.logo {
   cursor: pointer;
 }
-header #nav_conteiner #nav #buscador_conteiner label {
-  width: 300px;
+header nav.nav_conteiner div.nav form.buscador_conteiner {
   display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+  border: 1px solid #2A7AE4;
+  border-radius: 40px;
   align-items: center;
-  border-radius: 25px;
-  background-color: #f4f4f4;
-  padding: 12px 20px;
 }
-header #nav_conteiner #nav #buscador_conteiner label .fa-magnifying-glass {
-  color: #c5c5c5;
+header nav.nav_conteiner div.nav form.buscador_conteiner .fa-magnifying-glass {
+  color: #888888;
+  position: absolute;
+  top: 25%;
+  right: 2%;
 }
-header #nav_conteiner #nav #buscador_conteiner label #buscador {
-  width: 100%;
-  cursor: default;
-  border: none;
+header nav.nav_conteiner div.nav form.buscador_conteiner input.buscador {
+  width: 300px;
   outline: none;
+  border: none;
   background-color: transparent;
   color: #888888;
+  padding: 0.5rem 1.5rem 0.5rem 0.5rem;
 }
-header #nav_conteiner #nav #buscador_conteiner label #buscador::placeholder {
+header nav.nav_conteiner div.nav form.buscador_conteiner input.buscador::placeholder {
   color: #c5c5c5;
 }
-header #nav_conteiner #nav #buscador_conteiner label #buscador:focus + .fa-magnifying-glass {
-  color: #2A7AE4;
+header nav.nav_conteiner div.nav .fa-bars {
+  display: none;
   cursor: pointer;
 }
-header #nav_conteiner #nav .buttons_conteiner {
+header nav.nav_conteiner div.nav div.buttons_conteiner {
   display: flex;
   gap: 1.5rem;
 }
-header #nav_conteiner #nav .buttons_conteiner .btn_nav_pri {
+header nav.nav_conteiner div.nav div.buttons_conteiner a.btn_nav_pri {
   padding: 1rem;
   border: none;
   color: #FFFFFF;
@@ -62,10 +65,10 @@ header #nav_conteiner #nav .buttons_conteiner .btn_nav_pri {
   cursor: pointer;
   text-decoration: none;
 }
-header #nav_conteiner #nav .buttons_conteiner .btn_nav_pri:hover {
+header nav.nav_conteiner div.nav div.buttons_conteiner a.btn_nav_pri:hover {
   box-shadow: 1px 1px 10px #2A7AE4;
 }
-header #nav_conteiner #nav .buttons_conteiner .btn_nav_sec {
+header nav.nav_conteiner div.nav div.buttons_conteiner a.btn_nav_sec {
   padding: 1rem 2rem;
   border: 1px solid #2A7AE4;
   color: #2A7AE4;
@@ -73,22 +76,156 @@ header #nav_conteiner #nav .buttons_conteiner .btn_nav_sec {
   cursor: pointer;
   text-decoration: none;
 }
-header #nav_conteiner #nav .buttons_conteiner .btn_nav_sec:hover {
+header nav.nav_conteiner div.nav div.buttons_conteiner a.btn_nav_sec:hover {
   box-shadow: 1px 1px 25px #d1def1;
 }
-header #nav_conteiner #nav .buttons_conteiner .btn_nav_pri, header #nav_conteiner #nav .buttons_conteiner .btn_nav_sec {
+header nav.nav_conteiner div.nav div.buttons_conteiner a.btn_nav_pri, header nav.nav_conteiner div.nav div.buttons_conteiner a.btn_nav_sec {
   padding: 0.75rem;
 }
 
-main {
+@media (max-width: 1250px) {
+  header nav.nav_conteiner {
+    width: 100%;
+  }
+}
+@media (max-width: 900px) {
+  header nav.nav_conteiner {
+    width: 100%;
+    padding: 1rem 1rem;
+  }
+  header nav.nav_conteiner div.nav {
+    position: relative;
+  }
+  header nav.nav_conteiner div.nav form.buscador_conteiner {
+    position: absolute;
+    right: 7%;
+    border: none;
+  }
+  header nav.nav_conteiner div.nav form.buscador_conteiner .fa-magnifying-glass {
+    right: 5%;
+  }
+  header nav.nav_conteiner div.nav form.buscador_conteiner .fa-magnifying-glass:hover + input.buscador, header nav.nav_conteiner div.nav form.buscador_conteiner .fa-magnifying-glass + input.buscador:hover, header nav.nav_conteiner div.nav form.buscador_conteiner .fa-magnifying-glass + input.buscador:focus {
+    opacity: 1;
+    width: 200px;
+    padding-right: 2rem;
+    border-bottom: 1px solid #2A7AE4;
+  }
+  header nav.nav_conteiner div.nav form.buscador_conteiner input.buscador {
+    opacity: 0;
+    width: 0px;
+    transition: 0.3s;
+  }
+  header nav.nav_conteiner div.nav div.buttons_conteiner {
+    display: none;
+    background: #FFFFFF;
+    padding: 1.5rem;
+    border: 1px solid #2A7AE4;
+    position: absolute;
+    top: 60%;
+    right: 0;
+    z-index: 10;
+  }
+  header nav.nav_conteiner div.nav .fa-bars {
+    color: #c5c5c5;
+    display: block;
+  }
+  header nav.nav_conteiner div.nav .fa-bars:hover + div.buttons_conteiner, header nav.nav_conteiner div.nav .fa-bars ~ div.buttons_conteiner:hover {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 425px) {
+  header nav.nav_conteiner div.nav a > img.logo {
+    width: 80px;
+  }
+  header nav.nav_conteiner div.nav form.buscador_conteiner {
+    right: 10%;
+    z-index: 10;
+  }
+  header nav.nav_conteiner div.nav form.buscador_conteiner input.buscador {
+    background: #FFFFFF;
+  }
+}
+section.banner {
+  background-image: url(../../images/banner.png);
   width: 100%;
+  height: 350px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
 }
-main .registro_conteiner {
+section.banner div.banner_conteiner {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+}
+section.banner div.banner_conteiner h1.banner_title {
+  font-family: "Raleway", sans-serif;
+  font-size: 2rem;
+  color: #FFFFFF;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+section.banner div.banner_conteiner p.banner_descripcion {
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 1.5rem;
+}
+section.banner div.banner_conteiner button.btn_banner {
+  padding: 1rem;
+  border: none;
+  color: #FFFFFF;
+  background: #2A7AE4;
+  cursor: pointer;
+  text-decoration: none;
+}
+section.banner div.banner_conteiner button.btn_banner:hover {
+  box-shadow: 1px 1px 10px #2A7AE4;
+}
+section.banner div.banner_conteiner button.btn_banner:hover {
+  box-shadow: none;
+}
+
+@media (max-width: 1024px) {
+  section.banner div.banner_conteiner h1.banner_title {
+    font-size: 1.5rem;
+  }
+  section.banner div.banner_conteiner p.banner_descripcion {
+    font-size: 0.8rem;
+  }
+  section.banner div.banner_conteiner button.btn_banner {
+    padding: 0.8rem;
+  }
+}
+@media (max-width: 768px) {
+  section.banner {
+    height: 250px;
+  }
+  section.banner div.banner_conteiner h1.banner_title {
+    font-size: 1rem;
+  }
+  section.banner div.banner_conteiner p.banner_descripcion {
+    font-size: 0.7rem;
+  }
+  section.banner div.banner_conteiner button.btn_banner {
+    padding: 0.5rem;
+  }
+}
+.user_conteiner {
   width: 60%;
-  max-width: 550px;
-  margin: 0 auto;
+  max-width: 350px;
+  margin: 3rem auto;
 }
-main .registro_conteiner .title {
+.user_conteiner form.user_form {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.user_conteiner form.user_form h2.form_title {
   text-align: center;
   font-size: 2.5rem;
   margin: 2rem 0 1rem 0;
@@ -96,40 +233,36 @@ main .registro_conteiner .title {
   padding-bottom: 0.5rem;
   letter-spacing: 8px;
 }
-main .registro_conteiner form {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  width: 60%;
-  max-width: 550px;
-  margin: 0 auto;
-  min-width: 350px;
-}
-main .registro_conteiner form .input_conteiner {
+.user_conteiner form.user_form div.input_conteiner {
   position: relative;
   margin: 0 0 0.5rem 0;
   font-size: 1.2rem;
-  border-bottom: 2px solid #CCCCCC;
 }
-main .registro_conteiner form .input_conteiner input {
+.user_conteiner form.user_form div.input_conteiner input {
   width: 100%;
   padding: 2rem 0.5rem 0.5rem;
   border: none;
   outline: none;
   background-color: transparent;
   color: #464646;
+  border-bottom: 2px solid #CCCCCC;
 }
-main .registro_conteiner form .input_conteiner input::placeholder {
+.user_conteiner form.user_form div.input_conteiner input::placeholder {
   visibility: hidden;
 }
-main .registro_conteiner form .input_conteiner input:focus + label, main .registro_conteiner form .input_conteiner input:not(:placeholder-shown) + label {
+.user_conteiner form.user_form div.input_conteiner input.error {
+  border-bottom: 1px solid #e65d5d !important;
+}
+.user_conteiner form.user_form div.input_conteiner input.error:focus + label, .user_conteiner form.user_form div.input_conteiner input.error:not(:placeholder-shown) + label, .user_conteiner form.user_form div.input_conteiner input.error + label {
+  color: #e65d5d !important;
+}
+.user_conteiner form.user_form div.input_conteiner input:focus + label, .user_conteiner form.user_form div.input_conteiner input:not(:placeholder-shown) + label {
   top: 0.5rem;
   left: 0rem;
   font-size: 0.9rem;
   color: #2A7AE4;
 }
-main .registro_conteiner form .input_conteiner label {
+.user_conteiner form.user_form div.input_conteiner label {
   position: absolute;
   color: #464646;
   top: 2rem;
@@ -137,7 +270,16 @@ main .registro_conteiner form .input_conteiner label {
   transition: 0.3s;
   cursor: text;
 }
-main .registro_conteiner form .date_conteiner {
+.user_conteiner form.user_form p.pregunta_sesion {
+  font-size: 0.8rem;
+  color: #999999;
+  margin-top: 1.5rem;
+}
+.user_conteiner form.user_form p.pregunta_sesion > a {
+  text-decoration: none;
+  color: #2A7AE4;
+}
+.user_conteiner form.user_form div.date_conteiner {
   margin-top: 1.5rem;
   height: 25px;
   display: flex;
@@ -147,7 +289,10 @@ main .registro_conteiner form .date_conteiner {
   position: relative;
   font-size: 1.2rem;
 }
-main .registro_conteiner form .date_conteiner #date_registro {
+.user_conteiner form.user_form div.date_conteiner.error {
+  border-bottom: 2px solid #e65d5d !important;
+}
+.user_conteiner form.user_form div.date_conteiner input#date_registro {
   background: transparent;
   border: none;
   width: 80px;
@@ -159,22 +304,25 @@ main .registro_conteiner form .date_conteiner #date_registro {
   top: 0;
   right: 0;
 }
-main .registro_conteiner form .date_conteiner #date_registro::-webkit-calendar-picker-indicator {
+.user_conteiner form.user_form div.date_conteiner input#date_registro::-webkit-calendar-picker-indicator {
   display: none;
 }
-main .registro_conteiner form .date_conteiner #date_registro::-webkit-date-and-time-value {
+.user_conteiner form.user_form div.date_conteiner input#date_registro::-webkit-date-and-time-value {
   margin: 0;
 }
-main .registro_conteiner form .date_conteiner #date_registro:focus + label[for=date_registro] {
+.user_conteiner form.user_form div.date_conteiner input#date_registro:focus + label[for=date_registro] {
   opacity: 0;
 }
-main .registro_conteiner form .date_conteiner #date_registro:valid + label[for=date_registro] {
+.user_conteiner form.user_form div.date_conteiner input#date_registro:valid + label[for=date_registro] {
   color: #2A7AE4;
 }
-main .registro_conteiner form .date_conteiner #date_registro:focus {
+.user_conteiner form.user_form div.date_conteiner input#date_registro:focus {
   right: 50%;
 }
-main .registro_conteiner form .date_conteiner label[for=date_registro] {
+.user_conteiner form.user_form div.date_conteiner input#date_registro.error {
+  color: #e65d5d !important;
+}
+.user_conteiner form.user_form div.date_conteiner label[for=date_registro] {
   width: 50%;
   color: #464646;
   margin-bottom: 0.2rem;
@@ -183,89 +331,10 @@ main .registro_conteiner form .date_conteiner label[for=date_registro] {
   top: 0;
   left: 0;
 }
-main .registro_conteiner form p.pregunta_sesion {
-  font-size: 0.8rem;
-  color: #999999;
-  margin-top: 1rem;
+.user_conteiner form.user_form div.date_conteiner label[for=date_registro].error {
+  color: #e65d5d !important;
 }
-main .registro_conteiner form p.pregunta_sesion a {
-  text-decoration: none;
-  color: #2A7AE4;
-}
-main .registro_conteiner form #form_registro_btn {
-  padding: 1rem;
-  border: none;
-  color: #FFFFFF;
-  background: #2A7AE4;
-  cursor: pointer;
-  text-decoration: none;
-  margin-bottom: 2rem;
-}
-main .registro_conteiner form #form_registro_btn:hover {
-  box-shadow: 1px 1px 10px #2A7AE4;
-}
-
-.login_conteiner {
-  width: 60%;
-  max-width: 550px;
-  margin: 0 auto;
-  margin: 3rem auto;
-}
-.login_conteiner form {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.login_conteiner form .form_title {
-  text-align: center;
-  font-size: 2.5rem;
-  margin: 2rem 0 1rem 0;
-  font-family: "Raleway", sans-serif;
-  padding-bottom: 0.5rem;
-  letter-spacing: 8px;
-}
-.login_conteiner form .input_conteiner {
-  position: relative;
-  margin: 0 0 0.5rem 0;
-  font-size: 1.2rem;
-  border-bottom: 2px solid #CCCCCC;
-}
-.login_conteiner form .input_conteiner input {
-  width: 100%;
-  padding: 2rem 0.5rem 0.5rem;
-  border: none;
-  outline: none;
-  background-color: transparent;
-  color: #464646;
-}
-.login_conteiner form .input_conteiner input::placeholder {
-  visibility: hidden;
-}
-.login_conteiner form .input_conteiner input:focus + label, .login_conteiner form .input_conteiner input:not(:placeholder-shown) + label {
-  top: 0.5rem;
-  left: 0rem;
-  font-size: 0.9rem;
-  color: #2A7AE4;
-}
-.login_conteiner form .input_conteiner label {
-  position: absolute;
-  color: #464646;
-  top: 2rem;
-  left: 0;
-  transition: 0.3s;
-  cursor: text;
-}
-.login_conteiner form p.pregunta_sesion {
-  font-size: 0.8rem;
-  color: #999999;
-  margin-top: 1.5rem;
-}
-.login_conteiner form p.pregunta_sesion a {
-  text-decoration: none;
-  color: #2A7AE4;
-}
-.login_conteiner form #form_registro_btn {
+.user_conteiner form.user_form button.form_registro_btn {
   padding: 1rem;
   border: none;
   color: #FFFFFF;
@@ -275,65 +344,23 @@ main .registro_conteiner form #form_registro_btn:hover {
   width: 70%;
   margin: 0 auto 2rem auto;
 }
-.login_conteiner form #form_registro_btn:hover {
+.user_conteiner form.user_form button.form_registro_btn:hover {
   box-shadow: 1px 1px 10px #2A7AE4;
 }
-
-.nuevo_conteiner {
-  width: 60%;
-  max-width: 550px;
-  margin: 0 auto;
-  text-align: center;
+.user_conteiner.contacto {
+  margin: 0;
 }
-.nuevo_conteiner .title {
-  text-align: center;
-  font-size: 2.5rem;
-  margin: 2rem 0 1rem 0;
-  font-family: "Raleway", sans-serif;
-  padding-bottom: 0.5rem;
-  letter-spacing: 8px;
-  margin-bottom: 0;
+.user_conteiner.contacto form.user_form.contacto {
+  max-width: 500px;
+  margin: 0;
 }
-.nuevo_conteiner p.descripcion {
-  font-family: "Raleway", sans-serif;
-  margin-bottom: 1rem;
-}
-.nuevo_conteiner form {
-  text-align: center;
-}
-.nuevo_conteiner form .input_conteiner {
-  position: relative;
-  margin: 0 0 0.5rem 0;
-  font-size: 1.2rem;
-  border-bottom: 2px solid #CCCCCC;
-  margin-bottom: 1.5rem;
-}
-.nuevo_conteiner form .input_conteiner input {
-  width: 100%;
-  padding: 2rem 0.5rem 0.5rem;
-  border: none;
-  outline: none;
-  background-color: transparent;
+.user_conteiner.contacto form.user_form.contacto h2.contacto {
+  font-size: 1rem;
+  font-weight: bold;
   color: #464646;
+  margin: 0;
 }
-.nuevo_conteiner form .input_conteiner input::placeholder {
-  visibility: hidden;
-}
-.nuevo_conteiner form .input_conteiner input:focus + label, .nuevo_conteiner form .input_conteiner input:not(:placeholder-shown) + label {
-  top: 0.5rem;
-  left: 0rem;
-  font-size: 0.9rem;
-  color: #2A7AE4;
-}
-.nuevo_conteiner form .input_conteiner label {
-  position: absolute;
-  color: #464646;
-  top: 2rem;
-  left: 0;
-  transition: 0.3s;
-  cursor: text;
-}
-.nuevo_conteiner form #txt_producto {
+.user_conteiner.contacto form.user_form.contacto textarea#mensaje {
   border: none;
   outline: none;
   resize: none;
@@ -343,24 +370,33 @@ main .registro_conteiner form #form_registro_btn:hover {
   margin: 1rem auto;
   border-bottom: 2px solid #CCCCCC;
 }
-.nuevo_conteiner form #txt_producto::placeholder {
+.user_conteiner.contacto form.user_form.contacto textarea#mensaje.error {
+  border: 1px solid #e65d5d !important;
+}
+.user_conteiner.contacto form.user_form.contacto textarea#mensaje.error::placeholder {
+  color: #e65d5d;
+}
+.user_conteiner.contacto form.user_form.contacto textarea#mensaje::placeholder {
   font-family: "Raleway", sans-serif;
   font-weight: bold;
   color: #CCCCCC;
 }
-.nuevo_conteiner form #form_registro_btn {
-  padding: 1rem;
-  border: none;
-  color: #FFFFFF;
-  background: #2A7AE4;
-  cursor: pointer;
-  text-decoration: none;
-  width: 60%;
-}
-.nuevo_conteiner form #form_registro_btn:hover {
-  box-shadow: 1px 1px 10px #2A7AE4;
-}
 
+@media (max-width: 425px) {
+  .user_conteiner {
+    width: 90%;
+  }
+  .user_conteiner form.user_form div.date_conteiner input#date_registro:focus {
+    right: 40%;
+  }
+  .user_conteiner form.user_form div.date_conteiner label[for=date_registro] {
+    font-size: 0.8rem;
+    top: 25%;
+  }
+  .user_conteiner form.user_form button.form_registro_btn {
+    width: 100%;
+  }
+}
 section.todos_productos {
   width: 80%;
   margin: 2rem auto;
@@ -371,7 +407,7 @@ section.todos_productos section.head {
   align-items: center;
   margin-bottom: 1.5rem;
 }
-section.todos_productos section.head h1.title {
+section.todos_productos section.head h1.title_productos {
   font-size: 1.5em;
   font-weight: bold;
   font-family: "Raleway", sans-serif;
@@ -397,98 +433,201 @@ section.todos_productos section.body {
   flex-wrap: wrap;
   gap: 2rem;
 }
-section.todos_productos section.body .card_conteiner {
+section.todos_productos section.body div.card_conteiner {
   width: 150px;
 }
-section.todos_productos section.body .card_conteiner .card_img {
-  width: 100%;
+section.todos_productos section.body div.card_conteiner img.card_img {
   margin-bottom: 0.5rem;
 }
-section.todos_productos section.body .card_conteiner .card_title {
+section.todos_productos section.body div.card_conteiner h4.card_title {
   margin-bottom: 0.5rem;
   font-family: "Raleway", sans-serif;
   font-size: 0.9rem;
   font-weight: 300;
   font-style: italic;
 }
-section.todos_productos section.body .card_conteiner .card_precio {
+section.todos_productos section.body div.card_conteiner p.card_precio {
   margin-bottom: 0.5rem;
   font-family: "Raleway", sans-serif;
   font-size: 0.9rem;
   font-weight: bold;
 }
-section.todos_productos section.body .card_conteiner .card_ver {
-  justify-content: center;
+section.todos_productos section.body div.card_conteiner a.card_ver {
   color: #2A7AE4;
   text-decoration: none;
 }
-section.todos_productos section.body .card_conteiner .card_id {
+section.todos_productos section.body div.card_conteiner p.card_id {
   margin-bottom: 0.5rem;
   font-family: "Raleway", sans-serif;
   font-size: 0.9rem;
 }
-section.todos_productos section.body .card_conteiner .card_id:before {
+section.todos_productos section.body div.card_conteiner p.card_id:before {
   content: "#";
 }
 
-.banner {
-  background-image: url(../../images/banner.png);
-  width: 100%;
-  height: 350px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+@media (max-width: 425px) {
+  section.todos_productos {
+    width: 90%;
+    margin: 1rem auto;
+  }
+  section.todos_productos section.head h1.title_productos {
+    font-size: 1rem;
+  }
+  section.todos_productos section.head a.btn_productos {
+    padding: 0.4rem;
+    text-align: center;
+  }
+  section.todos_productos section.body {
+    text-align: center;
+  }
+  section.todos_productos section.body div.card_conteiner {
+    width: 100%;
+    max-width: 220px;
+    height: 235px;
+    position: relative;
+  }
+  section.todos_productos section.body div.card_conteiner img.card_img {
+    width: 90%;
+    height: 180px;
+  }
+  section.todos_productos section.body div.card_conteiner h4.card_title {
+    position: absolute;
+    left: 5%;
+  }
+  section.todos_productos section.body div.card_conteiner p.card_precio {
+    position: absolute;
+    left: 5%;
+    bottom: 0;
+  }
+  section.todos_productos section.body div.card_conteiner a.card_ver {
+    position: absolute;
+    right: 5%;
+    bottom: 15%;
+  }
+  section.todos_productos section.body div.card_conteiner p.card_id {
+    position: absolute;
+    right: 5%;
+  }
+}
+.nuevo_conteiner {
+  width: 60%;
+  max-width: 350px;
+  margin: 3rem auto;
+  text-align: center;
+}
+.nuevo_conteiner .title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 2rem 0 1rem 0;
+  font-family: "Raleway", sans-serif;
+  padding-bottom: 0.5rem;
+  letter-spacing: 8px;
+  margin-bottom: 0;
+}
+.nuevo_conteiner p.descripcion {
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 1rem;
+}
+.nuevo_conteiner form {
+  text-align: center;
+}
+.nuevo_conteiner form .input_conteiner {
   position: relative;
-}
-.banner .banner_conteiner {
-  position: absolute;
-  top: 50%;
-  left: 10%;
-}
-.banner .banner_conteiner h1.title {
-  font-family: "Raleway", sans-serif;
-  font-size: 2rem;
-  color: #FFFFFF;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-.banner .banner_conteiner p.descripcion {
-  color: #FFFFFF;
-  font-weight: bold;
-  font-size: 1rem;
-  font-family: "Raleway", sans-serif;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
   margin-bottom: 1.5rem;
 }
-.banner .banner_conteiner button.btn_banner {
+.nuevo_conteiner form .input_conteiner input {
+  width: 100%;
+  padding: 2rem 0.5rem 0.5rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #464646;
+  border-bottom: 2px solid #CCCCCC;
+}
+.nuevo_conteiner form .input_conteiner input::placeholder {
+  visibility: hidden;
+}
+.nuevo_conteiner form .input_conteiner input.error {
+  border-bottom: 1px solid #e65d5d !important;
+}
+.nuevo_conteiner form .input_conteiner input.error:focus + label, .nuevo_conteiner form .input_conteiner input.error:not(:placeholder-shown) + label, .nuevo_conteiner form .input_conteiner input.error + label {
+  color: #e65d5d !important;
+}
+.nuevo_conteiner form .input_conteiner input:focus + label, .nuevo_conteiner form .input_conteiner input:not(:placeholder-shown) + label {
+  top: 0.5rem;
+  left: 0rem;
+  font-size: 0.9rem;
+  color: #2A7AE4;
+}
+.nuevo_conteiner form .input_conteiner label {
+  position: absolute;
+  color: #464646;
+  top: 2rem;
+  left: 0;
+  transition: 0.3s;
+  cursor: text;
+}
+.nuevo_conteiner form #txt_producto {
+  border: none;
+  outline: none;
+  resize: none;
+  color: #464646;
+  padding: 0.5rem;
+  width: 100%;
+  margin: 1rem auto;
+  border-bottom: 2px solid #CCCCCC;
+}
+.nuevo_conteiner form #txt_producto.error {
+  border: 1px solid #e65d5d !important;
+}
+.nuevo_conteiner form #txt_producto.error::placeholder {
+  color: #e65d5d;
+}
+.nuevo_conteiner form #txt_producto::placeholder {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  color: #CCCCCC;
+}
+.nuevo_conteiner form #form_registro_btn {
   padding: 1rem;
   border: none;
   color: #FFFFFF;
   background: #2A7AE4;
   cursor: pointer;
   text-decoration: none;
+  width: 60%;
 }
-.banner .banner_conteiner button.btn_banner:hover {
+.nuevo_conteiner form #form_registro_btn:hover {
   box-shadow: 1px 1px 10px #2A7AE4;
 }
-.banner .banner_conteiner button.btn_banner:hover {
-  box-shadow: none;
-}
 
+@media (max-width: 425px) {
+  .nuevo_conteiner {
+    width: 90%;
+  }
+  .nuevo_conteiner form #form_registro_btn {
+    width: 100%;
+  }
+}
 footer {
   width: 100%;
   margin: 3rem 0 0 0;
   background: #d1def1;
 }
 footer .footer_conteiner {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   display: flex;
+  gap: 1rem;
   justify-content: space-between;
   padding: 3rem 0;
 }
 footer .footer_conteiner .footer_links__conteiner {
   display: flex;
-  gap: 3rem;
+  width: 60%;
+  justify-content: space-around;
 }
 footer .footer_conteiner .footer_links__conteiner a.logo {
   cursor: pointer;
@@ -505,71 +644,6 @@ footer .footer_conteiner .footer_links__conteiner .links .link_info {
 }
 footer .footer_conteiner .footer_links__conteiner .links .link_info:hover {
   text-decoration: underline;
-}
-footer .footer_conteiner .footer_conteiner__form {
-  width: 45%;
-}
-footer .footer_conteiner .footer_conteiner__form .title_contacto {
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  color: #464646;
-}
-footer .footer_conteiner .footer_conteiner__form .input_conteiner {
-  position: relative;
-  margin: 0 0 0.5rem 0;
-  font-size: 1.2rem;
-  border-bottom: 2px solid #CCCCCC;
-}
-footer .footer_conteiner .footer_conteiner__form .input_conteiner input {
-  width: 100%;
-  padding: 2rem 0.5rem 0.5rem;
-  border: none;
-  outline: none;
-  background-color: transparent;
-  color: #464646;
-}
-footer .footer_conteiner .footer_conteiner__form .input_conteiner input::placeholder {
-  visibility: hidden;
-}
-footer .footer_conteiner .footer_conteiner__form .input_conteiner input:focus + label, footer .footer_conteiner .footer_conteiner__form .input_conteiner input:not(:placeholder-shown) + label {
-  top: 0.5rem;
-  left: 0rem;
-  font-size: 0.9rem;
-  color: #2A7AE4;
-}
-footer .footer_conteiner .footer_conteiner__form .input_conteiner label {
-  position: absolute;
-  color: #464646;
-  top: 2rem;
-  left: 0;
-  transition: 0.3s;
-  cursor: text;
-}
-footer .footer_conteiner .footer_conteiner__form #mensaje {
-  border: none;
-  outline: none;
-  resize: none;
-  color: #464646;
-  padding: 0.5rem;
-  width: 100%;
-  margin: 1rem auto;
-  border-bottom: 2px solid #CCCCCC;
-}
-footer .footer_conteiner .footer_conteiner__form #mensaje::placeholder {
-  font-family: "Raleway", sans-serif;
-  font-weight: bold;
-  color: #CCCCCC;
-}
-footer .footer_conteiner .footer_conteiner__form .footer_btn {
-  padding: 1rem;
-  border: none;
-  color: #FFFFFF;
-  background: #2A7AE4;
-  cursor: pointer;
-  text-decoration: none;
-}
-footer .footer_conteiner .footer_conteiner__form .footer_btn:hover {
-  box-shadow: 1px 1px 10px #2A7AE4;
 }
 footer .footer_desarrollador {
   font-size: 0.8rem;
@@ -596,6 +670,39 @@ footer .footer_desarrollador .desarrollador {
   footer .footer_conteiner .footer_links__conteiner .links {
     width: 100%;
     gap: 1.5rem 0;
+  }
+}
+@media (max-width: 500px) {
+  footer div.footer_conteiner {
+    width: 100%;
+    flex-direction: column;
+    padding: 1rem 0;
+    align-items: center;
+  }
+  footer div.footer_conteiner div.footer_links__conteiner {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  footer div.footer_conteiner div.footer_links__conteiner a.logo img {
+    margin-bottom: 1rem;
+  }
+  footer div.footer_conteiner div.footer_links__conteiner div.links {
+    width: 100%;
+    gap: 1.5rem 0;
+  }
+  footer div.footer_conteiner div.user_conteiner.contacto {
+    border-top: 1px solid #2A7AE4;
+    width: 100%;
+    text-align: center;
+  }
+  footer div.footer_conteiner div.user_conteiner.contacto form.user_form.contacto {
+    width: 80%;
+    margin: 0 auto;
+    gap: 0;
+  }
+  footer div.footer_conteiner div.user_conteiner.contacto form.user_form.contacto h2.form_title.contacto {
+    margin: 1rem 0;
   }
 }
 

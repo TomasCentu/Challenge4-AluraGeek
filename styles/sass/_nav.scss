@@ -2,70 +2,161 @@ header {
     width: 100%;
     background: #FFFFFF;
 
-    #nav_conteiner {
+    & nav.nav_conteiner {
         width: 80%;
         margin: 0 auto;
         padding: 1rem 5rem;
 
-        #nav {
+        & div.nav {
             display: flex;
             align-items: center;
             justify-content: space-between;
 
-            a #logo {
+            & a > img.logo {
                 cursor: pointer;
             }
     
-            #buscador_conteiner {
-    
-                label {
-                    width: 300px;
-                    display: flex;
-                    align-items: center;
-                    border-radius: 25px;
-                    background-color: #f4f4f4;
-                    padding: 12px 20px;
-    
-                    .fa-magnifying-glass {
-                        color: #c5c5c5;
-                    }
-    
-                    #buscador {
-                        width: 100%;
-                        cursor: default;
-                        border: none;
-                        outline: none;
-                        background-color: transparent;
-                        color: #888888;
-                            
-                        &::placeholder {
-                            color: #c5c5c5;	
-                        }
+            form.buscador_conteiner {
+                display: flex;
+                flex-direction: row-reverse;
+                position: relative;
+                border: 1px solid $color_primario;
+                border-radius: 40px;
+                align-items: center;
 
-                        &:focus + .fa-magnifying-glass {
-                            color: $color_primario;
-                            cursor: pointer;
-                        }
-                    }
+                & .fa-magnifying-glass {
+                    color: #888888;
+                    position: absolute;
+                    top: 25%;
+                    right: 2%;
+                }
+    
+                & input.buscador {
+                    width: 300px;
+                    outline: none;
+                    border: none;
+                    background-color: transparent;
+                    color: #888888;
+                    padding: .5rem 1.5rem .5rem .5rem;
+                            
+                    &::placeholder {
+                        color: #c5c5c5;	
+                    }                    
                 }
             }
+            
+
+            & .fa-bars {
+                display: none;
+                cursor: pointer;
+            }
     
-            .buttons_conteiner {
+            & div.buttons_conteiner {
                 display: flex;
                 gap: 1.5rem;
 
-                .btn_nav_pri {
+                a.btn_nav_pri {
                     @include btn-pri;
                 }
 
-                .btn_nav_sec {
+                a.btn_nav_sec {
                     @include btn-sec;
                 }
 
-                .btn_nav_pri, .btn_nav_sec {
+                a.btn_nav_pri, a.btn_nav_sec {
                     padding: .75rem;
                 }
             }
         }
     }
+}
+
+// nav responsive
+@media (max-width: 1250px) {
+    header {
+        & nav.nav_conteiner {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    header {
+        & nav.nav_conteiner {
+            width: 100%;
+            padding: 1rem 1rem;
+
+            & div.nav {
+                position: relative;
+
+                form.buscador_conteiner {
+                    position: absolute;
+                    right: 7%;
+                    border: none;
+
+                    & .fa-magnifying-glass {
+                        right: 5%;
+
+                        &:hover + input.buscador,
+                        & + input.buscador:hover,
+                        & + input.buscador:focus {
+                            opacity: 1;
+                            width: 200px;
+                            padding-right: 2rem;
+                            border-bottom: 1px solid $color_primario;
+                        }
+                    }
+        
+                    & input.buscador {
+                        opacity: 0;
+                        width: 0px;
+                        transition: .3s;
+                    }
+                }
+
+                & div.buttons_conteiner {
+                    display: none;
+                    background: #FFFFFF;
+                    padding: 1.5rem;
+                    border: 1px solid $color_primario;
+                    position: absolute;
+                    top: 60%;
+                    right: 0;
+                    z-index: 10;
+                }
+
+                & .fa-bars {
+                    color: #c5c5c5;
+                    display: block;
+
+                    &:hover + div.buttons_conteiner,
+                    & ~ div.buttons_conteiner:hover {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+    }  
+}
+
+@media (max-width: 425px) {
+    header {
+        & nav.nav_conteiner {
+            & div.nav {
+                & a > img.logo {
+                    width: 80px;
+                }
+
+                & form.buscador_conteiner {
+                    right: 10%;
+                    z-index: 10;
+        
+                    & input.buscador {
+                        background: #FFFFFF;
+                    }
+                }
+            }
+        }
+    } 
 }
